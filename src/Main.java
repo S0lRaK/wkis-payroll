@@ -67,6 +67,7 @@ public class Main extends Application {
             stage = primaryStage;
             stage.setMinWidth(MINIMUM_WINDOW_WIDTH);
             stage.setMinHeight(MINIMUM_WINDOW_HEIGHT);
+            stage.setResizable(false);
             stage.setTitle("WKIS Payroll");
             gotoLogin();
             primaryStage.show();
