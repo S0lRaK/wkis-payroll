@@ -51,6 +51,8 @@ public class ProfileController extends AnchorPane {
     @FXML // URL location of the FXML file that was given to the FXMLLoader
     private URL location;
     @FXML
+    private Label labelWelcome;
+    @FXML
     private TextField user;
     @FXML
     private TextField phone;
@@ -73,6 +75,7 @@ public class ProfileController extends AnchorPane {
     public void setApp(Main application){
         this.application = application;
         User loggedUser = application.getLoggedUser();
+        labelWelcome.setText("Welcome, " + loggedUser.getId());
         user.setText(loggedUser.getId());
         email.setText(loggedUser.getEmail());
         phone.setText(loggedUser.getPhone());
