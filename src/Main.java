@@ -69,7 +69,7 @@ public class Main extends Application {
             stage.setMinHeight(MINIMUM_WINDOW_HEIGHT);
             stage.setResizable(false);
             stage.setTitle("WKIS Payroll");
-            gotoLogin();
+            goToLogin();
             primaryStage.show();
         } catch (Exception ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
@@ -85,7 +85,7 @@ public class Main extends Application {
         if (Authenticator.validate(userId, password)) {
             System.out.println("OK");
             loggedUser = User.of(userId);
-            gotoProfile();
+            goToProcessTextFile();
             return true;
         } else {
             System.out.println("NOT OK");
@@ -95,22 +95,22 @@ public class Main extends Application {
     
     void userLogout(){
         loggedUser = null;
-        gotoLogin();
+        goToLogin();
     }
-    
-    private void gotoProfile() {
+
+    private void goToLogin() {
         try {
-            ProfileController profile = (ProfileController) replaceSceneContent("Profile.fxml");
-            profile.setApp(this);
+            LoginController login = (LoginController) replaceSceneContent("Login.fxml");
+            login.setApp(this);
         } catch (Exception ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
-    private void gotoLogin() {
+    private void goToProcessTextFile() {
         try {
-            LoginController login = (LoginController) replaceSceneContent("Login.fxml");
-            login.setApp(this);
+            ProcessTextFileController profile = (ProcessTextFileController) replaceSceneContent("ProcessTextFile.fxml");
+            profile.setApp(this);
         } catch (Exception ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }

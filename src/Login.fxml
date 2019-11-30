@@ -32,37 +32,45 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<?import java.lang.*?>
 <?import java.net.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.Rectangle?>
-<?import java.net.URL?>
 
-<AnchorPane id="AnchorPaneGlobal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="888.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
+<AnchorPane id="AnchorPaneGlobal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="500.0" prefWidth="888.0" styleClass="background" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
     <children>
         <AnchorPane id="AnchorPaneLogin" prefHeight="500.0" prefWidth="348.0">
             <children>
-                <Rectangle id="rectangleLoginBakground" arcHeight="5.0" arcWidth="5.0" fill="#5b6065" focusTraversable="true" height="281.0" layoutX="6.0" layoutY="118.0" opacity="0.5" stroke="TRANSPARENT" strokeType="INSIDE" width="337.0" />
-                <Label id="labelUsername" layoutX="55.0" layoutY="135.0" text="Username" />
-                <TextField id="textFieldUsername" fx:id="userId" layoutX="53.0" layoutY="158.0" prefHeight="31.0" prefWidth="243.0" promptText="Username" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0" />
-                <Label id="labelPassword" layoutX="55.0" layoutY="203.0" text="Password" />
-                <PasswordField id="passwordField" fx:id="password" layoutX="53.0" layoutY="225.0" prefHeight="31.0" prefWidth="243.0" promptText="Password" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="52.0" />
-                <Button id="buttonLogin" fx:id="login" defaultButton="true" layoutX="97.0" layoutY="300.0" onAction="#processLogin" prefHeight="31.0" prefWidth="155.0" text="LOGIN" AnchorPane.bottomAnchor="162.0" AnchorPane.leftAnchor="97.0" AnchorPane.rightAnchor="96.0">
+                <Rectangle id="rectangleLoginBakground" arcHeight="5.0" arcWidth="5.0" fill="#5b6065"
+                           focusTraversable="true" height="281.0" layoutX="6.0" layoutY="118.0" opacity="0.5"
+                           stroke="TRANSPARENT" strokeType="INSIDE" width="337.0"/>
+                <Label id="labelUsername" layoutX="55.0" layoutY="135.0" text="Username"/>
+                <TextField id="textFieldUsername" fx:id="userId" layoutX="53.0" layoutY="158.0" prefHeight="31.0"
+                           prefWidth="243.0" promptText="Username" AnchorPane.leftAnchor="53.0"
+                           AnchorPane.rightAnchor="52.0"/>
+                <Label id="labelPassword" layoutX="55.0" layoutY="203.0" text="Password"/>
+                <PasswordField id="passwordField" fx:id="password" layoutX="53.0" layoutY="225.0" prefHeight="31.0"
+                               prefWidth="243.0" promptText="Password" AnchorPane.leftAnchor="53.0"
+                               AnchorPane.rightAnchor="52.0"/>
+                <Button id="buttonLogin" fx:id="login" defaultButton="true" layoutX="97.0" layoutY="300.0"
+                        onAction="#processLogin" prefHeight="31.0" prefWidth="155.0" text="LOGIN"
+                        AnchorPane.bottomAnchor="162.0" AnchorPane.leftAnchor="97.0" AnchorPane.rightAnchor="96.0">
                     <cursor>
-                        <Cursor fx:constant="HAND" />
+                        <Cursor fx:constant="HAND"/>
                     </cursor>
                 </Button>
-                <Label id="labelError" fx:id="errorMessage" alignment="CENTER" layoutX="49.0" layoutY="364.0" prefHeight="18.0" prefWidth="243.0" styleClass="error" textFill="#e80909" />
-                <Label id="labelTitle" layoutX="121.0" layoutY="61.0" styleClass="title" text="WKIS Payroll" />
-                <Label id="labelCopyright" layoutX="11.0" layoutY="466.0" styleClass="caption" text="© E. Arellano, C. Garcia Carmona" />
+                <Label id="labelError" fx:id="errorMessage" alignment="CENTER" layoutX="49.0" layoutY="364.0"
+                       prefHeight="18.0" prefWidth="243.0" styleClass="error" textFill="#e80909"/>
+                <Label id="labelTitle" layoutX="121.0" layoutY="61.0" styleClass="title" text="WKIS Payroll"/>
+                <Label id="labelCopyright" layoutX="11.0" layoutY="466.0" styleClass="caption"
+                       text="© E. Arellano, C. Garcia Carmona"/>
             </children>
         </AnchorPane>
     </children>
     <stylesheets>
-        <URL value="@Login.css" />
+        <URL value="@Main.css"/>
     </stylesheets>
 </AnchorPane>

@@ -44,7 +44,7 @@ import java.util.ResourceBundle;
 /**
  * Profile Controller.
  */
-public class ProfileController extends AnchorPane {
+public class ProcessTextFileController extends AnchorPane {
 
     @FXML // ResourceBundle that was given to the FXMLLoader
     private ResourceBundle resources;
@@ -53,18 +53,8 @@ public class ProfileController extends AnchorPane {
     @FXML
     private Label labelWelcome;
     @FXML
-    private TextField user;
-    @FXML
-    private TextField phone;
-    @FXML
-    private TextField email;
-    @FXML
-    private TextArea address;
-    @FXML
-    private CheckBox subscribed;
-    @FXML
     private Hyperlink logout;
-    @FXML 
+    @FXML
     private Button update;
     
     @FXML 
@@ -76,14 +66,6 @@ public class ProfileController extends AnchorPane {
         this.application = application;
         User loggedUser = application.getLoggedUser();
         labelWelcome.setText("Welcome, " + loggedUser.getId());
-        user.setText(loggedUser.getId());
-        email.setText(loggedUser.getEmail());
-        phone.setText(loggedUser.getPhone());
-        if (loggedUser.getAddress() != null) {
-            address.setText(loggedUser.getAddress());
-        }
-        subscribed.setSelected(loggedUser.isSubscribed());
-        success.setOpacity(0);
     }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
@@ -104,10 +86,6 @@ public class ProfileController extends AnchorPane {
             return;
         }
         User loggedUser = application.getLoggedUser();
-        loggedUser.setEmail(email.getText());
-        loggedUser.setPhone(phone.getText());
-        loggedUser.setSubscribed(subscribed.isSelected());
-        loggedUser.setAddress(address.getText());
         animateMessage();
     }
 
